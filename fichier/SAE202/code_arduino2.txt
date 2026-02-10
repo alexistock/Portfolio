@@ -1,0 +1,126 @@
+#define pi 3.14159265359
+#define PIN_ADC A2
+char start_analog = 0;
+float fe, te;
+float a11, a21, b01, f1, w1, Ap1;
+float y1[3];
+unsigned long duree_note = 500; // Durée de la note
+
+// Pins des boutons
+const int buttonPins[] = {10, 9, 8, A0, A1, A2, A3, A4, A5}; 
+// Fréquences des notes correspondantes (RE2, MI2, FA2, SOL2, LA2, SI2, DO3, RE3, MI3)
+const float frequencies[] = {587, 660, 698, 784, 880, 968, 1046, 1175, 1318}; 
+
+// Historique des fréquences des touches appuyées
+float toucheAppuyee[100]; // Taille maximale de l'historique
+int toucheIndex = 0; // Index actuel dans l'historique
+
+// Fonction de traitement IT n°12 = Timer 1 CTC
+ISR(TIMER1_COMPA_vect) {
+    start_analog = 1;
+}
+
+void setup() {
+    Serial.begin(9600); // Communication série pour envoyer les fréquences détectées
+
+    // Initialiser les pins des boutons en mode INPUT_PULLUP
+    for (int i = 0; i < 9; i++) {
+        pinMode(buttonPins[i], INPUT_PULLUP);
+    }
+
+    // Initialiser la LED intégrée
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, LOW); // Assurez-vous que la LED est éteinte au début
+
+    // Initialisation des coefficients pour la fréquence LA 440 Hz
+    coefficient(880.00);
+
+    // Echantillonnage
+    fe = 2000.0; // Fréquence d'échantillonnage de 2000 Hz
+    te = 1.0 / fe;
+
+    // Configuration Timer 1
+    TCCR1A = 0;
+    TCCR1B = B00001010; // Mode CTC (Clear Timer On Compare) et Prescaler 8 (Clock/8)
+    OCR1A = 999; // Valeur fixe pour 2000 Hz d'échantillonnage
+    TIMSK1 = B00000010; // IT Timer1 Quand TCNT1=OCR1A
+    DDRD = B11111111; // PortD en sortie !
+    sei(); // activation des interruptions globales
+}
+
+void loop() {
+    // Vérifier l'état des boutons
+    for (int i = 0; i < 9; i++) {
+        if (digitalRead(buttonPins[i]) == LOW) { // Bouton appuyé
+            coefficient(frequencies[i]); // Modifier les coefficients selon la fréquence correspondante
+            playNote();
+            Serial.println(frequencies[i]); // Envoyer la fréquence détectée à la seconde carte
+            
+            // Enregistrer la fréquence dans l'historique
+            if (toucheIndex < 100) {
+                toucheAppuyee[toucheIndex++] = frequencies[i];
+            }
+
+            // Afficher le tableau toucheAppuyee
+            afficherToucheAppuyee();
+
+            // Vérifier la séquence spécifique
+            verifierSequence();
+
+            delay(duree_note + 100); // Attendre un peu après avoir joué la note
+        }
+    }
+}
+
+void playNote() {
+    unsigned long startMillis = millis();
+    while (millis() - startMillis < duree_note) {
+        if (start_analog) {
+            // Equation aux différences d’un sinus
+            y1[0] = a11 * y1[1] - a21 * y1[2];
+
+            // Décalage des échantillons retardés
+            y1[2] = y1[1];
+            y1[1] = y1[0];
+
+            // Mise à l'échelle pour correspondre à une sortie 8 bits
+            PORTD = (uint8_t)((y1[0] + 1) * 127); // Mise à l'échelle de y1[0] de -1..1 à 0..255
+
+            start_analog = 0;
+        }
+    }
+
+    delay(duree_note); // Délai de 500 ms
+}
+
+void coefficient(float frequence) {
+    Ap1 = 1;
+    f1 = frequence;
+    w1 = 2 * pi * f1 / fe;
+    a11 = 2 * cos(w1);
+    a21 = 1;
+    b01 = Ap1 * sin(w1);
+    y1[2] = 0;
+    y1[1] = b01;
+}
+
+void afficherToucheAppuyee() {
+    Serial.print("Touche appuyée: ");
+    for (int i = 0; i < toucheIndex; i++) {
+        Serial.print(toucheAppuyee[i]);
+        if (i < toucheIndex - 1) {
+            Serial.print(", ");
+        }
+    }
+    Serial.println();
+}
+
+void verifierSequence() {
+    if (toucheIndex >= 3) {
+        if (toucheAppuyee[toucheIndex - 3] == 262.00 &&
+            toucheAppuyee[toucheIndex - 2] == 330.00 &&
+            toucheAppuyee[toucheIndex - 1] == 294.00) {
+            digitalWrite(LED_BUILTIN, HIGH); // Allumer la LED intégrée
+        }
+    }
+}
