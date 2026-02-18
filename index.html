@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Alexis STOCK, étudiant en BUT Réseaux & Télécommunications, spécialisé en cybersécurité et administration réseau. Alternance chez Constellium.">
     <title>Alexis STOCK | Portfolio R&T</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,31 +11,36 @@
 </head>
 <body>
 
+    <!-- Canvas en dehors du main pour éviter les conflits de stacking -->
+    <canvas id="cyberCanvas"></canvas>
+
     <header class="main-header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigation principale">
             <div class="logo">
-                <span class="highlight">Alexis</span>STOCK
+                <span class="highlight">Alexis</span><span class="lastname">STOCK</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#presentation" class="nav-link active">Présentation</a></li>
-                <li><a href="#admin-reseaux" class="nav-link">Administrer les réseaux</a></li>
-                <li><a href="#connecter-usagers" class="nav-link">Connecter les usagers</a></li>
-                <li><a href="#outils-rt" class="nav-link">Outils R&T</a></li>
-                <li><a href="#si-securise" class="nav-link">SI Sécurisé</a></li>
-                <li><a href="#surveiller-si" class="nav-link">Surveiller le SI</a></li>
-                <li><a href="#alternance" class="nav-link">Expérience Alternance</a></li>
-                <li><a href="#traces" class="nav-link highlight-btn">Traces</a></li> 
+                <li><a href="#presentation"      class="nav-link active">Présentation</a></li>
+                <li><a href="#admin-reseaux"      class="nav-link">Réseaux</a></li>
+                <li><a href="#connecter-usagers"  class="nav-link">Usagers</a></li>
+                <li><a href="#outils-rt"          class="nav-link">Outils R&T</a></li>
+                <li><a href="#si-securise"        class="nav-link">SI Sécurisé</a></li>
+                <li><a href="#surveiller-si"      class="nav-link">Surveillance SI</a></li>
+                <li><a href="#alternance"         class="nav-link">Alternance</a></li>
+                <li><a href="#traces"             class="nav-link highlight-btn">Traces</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <canvas id="cyberCanvas"></canvas>
-        
+
+        <!-- ================================================================
+             SECTION 1 — PRÉSENTATION
+        ================================================================ -->
         <section id="presentation" class="hero-section">
             <div class="container">
                 <div class="presentation-wrapper">
-                    
+
                     <div class="bio-column">
                         <h1 class="glitch-text" data-text="Alexis STOCK">Alexis STOCK</h1>
                         <div class="typing-container">
@@ -48,14 +54,17 @@
                             </div>
                             <div class="card-body">
                                 <p class="lead-text">
-                                    Étudiant en <strong>BUT Réseaux et Télécommunications</strong> (3ème année), 
-                                    passionné par la <span class="highlight-cyan">cybersécurité</span> et les <span class="highlight-cyan">infrastructures réseau</span>.
+                                    Étudiant en <strong>BUT Réseaux et Télécommunications</strong> (3ème année),
+                                    passionné par la <span class="highlight-cyan">cybersécurité</span> et les
+                                    <span class="highlight-cyan">infrastructures réseau</span>.
                                 </p>
                                 <p>
-                                    Ce portfolio présente mon parcours, mes projets SAE, ainsi que mes missions techniques chez <strong>Constellium</strong>, groupe industriel international.
+                                    Ce portfolio présente mon parcours, mes projets SAE, ainsi que mes missions
+                                    techniques chez <strong>Constellium</strong>, groupe industriel international.
                                 </p>
                                 <p>
-                                    De la programmation embarquée à la sécurisation d’architectures, chaque projet témoigne de ma volonté de devenir un professionnel polyvalent.
+                                    De la programmation embarquée à la sécurisation d'architectures, chaque projet
+                                    témoigne de ma volonté de devenir un professionnel polyvalent.
                                 </p>
                                 <div class="status-badge">
                                     <span class="dot"></span> Disponible pour de nouveaux challenges
@@ -64,8 +73,11 @@
                         </div>
 
                         <div class="btn-group">
-                            <a href="fichier/CV-Alexis-Stock.pdf" class="btn btn-cyber" target="_blank">
-                                <i class="fas fa-file-pdf"></i> CV 
+                            <a href="fichier/CV_FR.pdf" class="btn btn-cyber" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> CV FR
+                            </a>
+                            <a href="fichier/CV_EN.pdf" class="btn btn-secondary" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> CV EN
                             </a>
                         </div>
                     </div>
@@ -98,58 +110,71 @@
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 2 — ADMINISTRER LES RÉSEAUX
+        ================================================================ -->
         <section id="admin-reseaux" class="skill-section">
             <div class="container">
                 <div class="section-header reveal">
                     <h2 class="section-title"><i class="fas fa-network-wired"></i> Administrer les réseaux et Internet</h2>
                     <p class="section-intro">
-                        Unité d’enseignement centrale du BUT R&T visant à gérer, configurer et maintenir des infrastructures 
-                        performantes et sécurisées.
+                        Dans le cadre de ma formation en <strong>BUT Réseaux et Télécommunications</strong>,
+                        l'unité <strong>Administrer les réseaux et Internet</strong> permet de maîtriser la gestion,
+                        la configuration et la maintenance d'infrastructures réseau fiables et performantes,
+                        essentielles au fonctionnement des systèmes d'information modernes.
                     </p>
                 </div>
 
                 <div class="ac-container">
                     <div class="ac-column reveal">
-                        <h3><i class="fas fa-router"></i> Compétences Réseaux</h3>
+                        <h3><i class="fas fa-router"></i> Administrer les réseaux (A3)</h3>
                         <div class="ac-grid">
-                            <div class="ac-item" title="Configurer le routage dynamique">AC21.01</div>
-                            <div class="ac-item" title="QoS et Sécurité réseau">AC21.02</div>
-                            <div class="ac-item" title="Virtualisation & Clients">AC21.03</div>
-                            <div class="ac-item" title="Services réseaux avancés">AC21.04</div>
-                            <div class="ac-item" title="Architecture Internet">AC21.05</div>
-                            <div class="ac-item" title="Collaboration équipe">AC21.06</div>
-                        </div>
-                    </div>
-                    <div class="ac-column reveal">
-                        <h3><i class="fas fa-code-branch"></i> Compétences Informatiques</h3>
-                        <div class="ac-grid">
-                            <div class="ac-item info" title="Utilisation outils info">AC13.01</div>
-                            <div class="ac-item info" title="Debug & Modif programme">AC13.02</div>
-                            <div class="ac-item info" title="Algorithmique">AC13.03</div>
-                            <div class="ac-item info" title="Architecture Web">AC13.04</div>
-                            <div class="ac-item info" title="Gestion de données">AC13.05</div>
-                            <div class="ac-item info" title="Travail collaboratif">AC13.06</div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.01</span>
+                                <span class="ac-label">Concevoir un projet réseau intégrant haute disponibilité, QoS, sécurité et supervision</span>
+                            </div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.02</span>
+                                <span class="ac-label">Réaliser la documentation technique du projet</span>
+                            </div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.03</span>
+                                <span class="ac-label">Réaliser une maquette de démonstration du projet</span>
+                            </div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.04</span>
+                                <span class="ac-label">Défendre et argumenter un projet</span>
+                            </div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.05</span>
+                                <span class="ac-label">Communiquer avec les acteurs du projet</span>
+                            </div>
+                            <div class="ac-card">
+                                <span class="ac-code">AC31.06</span>
+                                <span class="ac-label">Gérer le projet et ses étapes en respectant les délais</span>
+                            </div>
                         </div>
                     </div>
                     <div class="skill-image-box reveal">
-                        <img src="fichier/UE1.jpg" alt="Illustration Administration Réseaux">
+                        <img src="fichier/UE1.jpg" alt="Illustration Administration Réseaux" loading="lazy">
                     </div>
                 </div>
 
                 <div class="sae-container reveal">
                     <h3 class="sae-title">Projets & SAE (Situations d'Apprentissage et d'Évaluation)</h3>
-                    
+
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 5.01 — Traçage véhicule GNSS via LoRaWAN</span>
+                            <span>SAE 5.01 — Traçage véhicule GNSS via LoRaWAN</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
-                            <p>Solution complète de suivi GNSS/LoRaWAN avec focus on the power consumption (Deep Sleep).</p>
+                            <p>Solution complète de suivi GNSS/LoRaWAN avec optimisation de la consommation énergétique (Deep Sleep).</p>
                             <ul>
                                 <li><strong>Technos :</strong> LoRaWAN (TTN), MQTT, Node-RED, GNSS.</li>
                                 <li><strong>Réalisation :</strong> Optimisation payload, alertes SMS, interface temps réel.</li>
                             </ul>
+                            <div class="tech-tags"><span>LoRaWAN</span><span>MQTT</span><span>GNSS</span><span>Node-RED</span></div>
                         </div>
                     </div>
 
@@ -178,40 +203,47 @@
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 3 — CONNECTER LES USAGERS
+        ================================================================ -->
         <section id="connecter-usagers" class="skill-section">
             <div class="container">
                 <div class="section-header reveal">
                     <h2 class="section-title"><i class="fas fa-satellite-dish"></i> Connecter les entreprises et les usagers</h2>
                     <p class="section-intro">
-                        Formation aux principes essentiels de la communication réseau : infrastructures d’accès filaires/sans fil, 
-                        ToIP et connexion de sites distants sécurisés.
+                        L'unité <strong>Connecter les entreprises et les usagers</strong> forme aux principes essentiels de la
+                        communication réseau : mise en place d'infrastructures filaires et sans fil, intégration de la sécurité
+                        et connexion fiable des collaborateurs et sites distants.
                     </p>
                 </div>
 
                 <div class="ac-container">
                     <div class="skill-image-box reveal">
-                        <img src="fichier/UE2.jpg" alt="Illustration Connecter les usagers">
+                        <img src="fichier/UE2.jpg" alt="Illustration Connecter les usagers" loading="lazy">
                     </div>
                     <div class="ac-column reveal">
-                        <h3><i class="fas fa-broadcast-tower"></i> Transmissions & Accès</h3>
+                        <h3><i class="fas fa-broadcast-tower"></i> Connecter les usagers (A3)</h3>
                         <div class="ac-grid">
-                            <div class="ac-item" title="Systèmes de transmissions complexes">AC22.01</div>
-                            <div class="ac-item" title="Accès distant sécurisé">AC22.02</div>
-                            <div class="ac-item" title="Connexion multi-site opérateur">AC22.03</div>
-                            <div class="ac-item" title="Réseaux d'accès opérateurs">AC22.04</div>
-                            <div class="ac-item" title="Cahier des charges R&T">AC22.05</div>
-                            <div class="ac-item" title="Réseau sans fil sécurisé">AC32.02</div>
-                        </div>
-                    </div>
-                    <div class="ac-column reveal">
-                        <h3><i class="fas fa-phone-alt"></i> Signaux & ToIP</h3>
-                        <div class="ac-grid">
-                            <div class="ac-item info" title="Mesure et analyse de signaux">AC12.01</div>
-                            <div class="ac-item info" title="Transmissions élémentaires">AC12.02</div>
-                            <div class="ac-item info" title="Supports de transmission">AC12.03</div>
-                            <div class="ac-item info" title="Connecter des systèmes ToIP">AC12.04</div>
-                            <div class="ac-item info" title="Système de comm. entreprise">AC32.01</div>
-                            <div class="ac-item info" title="Collaboration projet FR/EN">AC32.05</div>
+                            <div class="ac-card cyan">
+                                <span class="ac-code">AC32.01</span>
+                                <span class="ac-label">Déployer un système de communication pour l'entreprise</span>
+                            </div>
+                            <div class="ac-card cyan">
+                                <span class="ac-code">AC32.02</span>
+                                <span class="ac-label">Déployer un réseau d'accès sans fil en intégrant les enjeux de la sécurité</span>
+                            </div>
+                            <div class="ac-card cyan">
+                                <span class="ac-code">AC32.03</span>
+                                <span class="ac-label">Déployer un réseau d'accès fixe ou mobile pour un opérateur en intégrant la sécurité</span>
+                            </div>
+                            <div class="ac-card cyan">
+                                <span class="ac-code">AC32.04</span>
+                                <span class="ac-label">Permettre aux collaborateurs de se connecter de manière sécurisée au SI</span>
+                            </div>
+                            <div class="ac-card cyan">
+                                <span class="ac-code">AC32.05</span>
+                                <span class="ac-label">Collaborer en mode projet en français et en anglais</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,7 +253,7 @@
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 5.01 — Traçage véhicule via GNSS et LoRaWAN</span>
+                            <span>SAE 5.01 — Traçage véhicule via GNSS et LoRaWAN</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
@@ -237,7 +269,7 @@
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 5.02 — Application collaborative Voyage (Python)</span>
+                            <span>SAE 5.02 — Application collaborative Voyage (Python)</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
@@ -253,7 +285,7 @@
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 2.04 — Infrastructure LAN & ToIP</span>
+                            <span>SAE 2.04 — Infrastructure LAN & ToIP</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
@@ -283,41 +315,52 @@
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 4 — OUTILS R&T
+        ================================================================ -->
         <section id="outils-rt" class="skill-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2 class="section-title"><i class="fas fa-code"></i> Créer des outils et applications informatiques pour les R&T</h2>
+                    <h2 class="section-title"><i class="fas fa-code"></i> Créer des outils et applications pour les R&T</h2>
                     <p class="section-intro">
-                        Conception de solutions logicielles pour automatiser, superviser et optimiser les infrastructures réseau 
-                        en combinant programmation, gestion de données et administration système.
+                        Cette unité permet de <strong>concevoir des outils et applications</strong> pour automatiser,
+                        superviser et optimiser les infrastructures réseau. On combine programmation, gestion de données
+                        et administration système pour répondre aux besoins réels des entreprises.
                     </p>
                 </div>
 
                 <div class="ac-container">
                     <div class="ac-column reveal">
-                        <h3><i class="fas fa-terminal"></i> Développement & Automatisation</h3>
+                        <h3><i class="fas fa-terminal"></i> Créer des outils R&T (A3)</h3>
                         <div class="ac-grid">
-                            <div class="ac-item" title="Automatiser via scripts">AC23.01</div>
-                            <div class="ac-item" title="Appli Web ou Mobile">AC23.02</div>
-                            <div class="ac-item" title="Programmation Client/Serveur">AC23.03</div>
-                            <div class="ac-item" title="Spécifications & Cahier des charges">AC33.01</div>
-                            <div class="ac-item" title="Déployer et maintenir une solution">AC33.04</div>
-                            <div class="ac-item" title="Sécuriser l'environnement numérique">AC33.06</div>
-                        </div>
-                    </div>
-                    <div class="ac-column reveal">
-                        <h3><i class="fas fa-database"></i> Données & Collaboration</h3>
-                        <div class="ac-grid">
-                            <div class="ac-item info" title="Administrer un SGBD">AC23.04</div>
-                            <div class="ac-item info" title="Accès aux données (Web/App)">AC23.05</div>
-                            <div class="ac-item info" title="Traduire un algorithme">AC13.03</div>
-                            <div class="ac-item info" title="Architecture Web">AC13.04</div>
-                            <div class="ac-item info" title="Environnement collaboratif">AC33.02</div>
-                            <div class="ac-item info" title="Veille technologique">AC33.05</div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.01</span>
+                                <span class="ac-label">Élaborer les spécifications techniques et le cahier des charges d'une application</span>
+                            </div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.02</span>
+                                <span class="ac-label">Mettre en place un environnement de travail collaboratif</span>
+                            </div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.03</span>
+                                <span class="ac-label">Participer à la formation des utilisateurs</span>
+                            </div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.04</span>
+                                <span class="ac-label">Déployer et maintenir une solution informatique</span>
+                            </div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.05</span>
+                                <span class="ac-label">S'informer sur les évolutions et les nouveautés technologiques</span>
+                            </div>
+                            <div class="ac-card orange">
+                                <span class="ac-code">AC33.06</span>
+                                <span class="ac-label">Sécuriser l'environnement numérique d'une application</span>
+                            </div>
                         </div>
                     </div>
                     <div class="skill-image-box reveal">
-                        <img src="fichier/UE3.jpg" alt="Illustration Outils R&T">
+                        <img src="fichier/UE3.jpg" alt="Illustration Outils R&T" loading="lazy">
                     </div>
                 </div>
 
@@ -326,11 +369,11 @@
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 5.01 — Système de communication IoT LoRaWAN</span>
+                            <span>SAE 5.01 — Système de communication IoT LoRaWAN</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
-                            <p>Déploiement d’un système IoT sécurisé : réception, transfert et visualisation de données GNSS via MQTT et interface web.</p>
+                            <p>Déploiement d'un système IoT sécurisé : réception, transfert et visualisation de données GNSS via MQTT et interface web.</p>
                             <ul class="custom-list">
                                 <li>Programmation FiPy/LoPy (MicroPython) pour gestion accéléromètre et deep sleep.</li>
                                 <li>Traitement et formatage des données via Node-RED.</li>
@@ -342,7 +385,7 @@
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>🇫🇷 SAE 5.02 — Application collaborative Voyage (Python)</span>
+                            <span>SAE 5.02 — Application collaborative Voyage (Python)</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
@@ -352,7 +395,7 @@
                                 <li>Déploiement via Docker pour la portabilité.</li>
                                 <li>Méthodologie projet : Trello, GitHub, Discord.</li>
                             </ul>
-                            <div class="tech-tags"><span>Python Fullstack</span><span>Docker</span><span>SQL</span></div>
+                            <div class="tech-tags"><span>Python</span><span>Docker</span><span>SQL</span></div>
                         </div>
                     </div>
 
@@ -380,7 +423,7 @@
                         <div class="sae-content">
                             <p>Conception d'applications Web complexes avec gestion de données.</p>
                             <ul class="custom-list">
-                                <li><strong>SAE 2.03 :</strong> Gestion scolaire (Django, ModelForm, PDF Automatiques, CSV).</li>
+                                <li><strong>SAE 2.03 :</strong> Gestion scolaire (Django, ModelForm, PDF automatiques, CSV).</li>
                                 <li><strong>SAE 2.04 :</strong> Collecte de capteurs MQTT avec base MySQL et serveur Apache2.</li>
                             </ul>
                         </div>
@@ -402,38 +445,44 @@
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 5 — SI SÉCURISÉ
+        ================================================================ -->
         <section id="si-securise" class="skill-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2 class="section-title"><i class="fas fa-user-shield"></i> Administrer un système d’information sécurisé</h2>
+                    <h2 class="section-title"><i class="fas fa-user-shield"></i> Administrer un système d'information sécurisé</h2>
                     <p class="section-intro">
-                        Identification, analyse et réponse aux incidents de sécurité. Maîtrise des mécanismes de défense pour garantir 
-                        la confidentialité, l’intégrité et la disponibilité des infrastructures.
+                        Dans un contexte de menaces numériques croissantes, cette unité forme à
+                        <strong>la surveillance et protection des systèmes d'information</strong>.
+                        Les compétences couvrent l'identification, l'analyse et la réponse aux incidents de sécurité,
+                        garantissant la confidentialité, l'intégrité et la disponibilité des infrastructures.
                     </p>
                 </div>
 
                 <div class="ac-container">
                     <div class="skill-image-box reveal">
-                        <img src="fichier/UE4.jpg" alt="Illustration SI Sécurisé">
+                        <img src="fichier/UE4.jpg" alt="Illustration SI Sécurisé" loading="lazy">
                     </div>
                     <div class="ac-column reveal">
-                        <h3><i class="fas fa-user-lock"></i> Fondamentaux & Défense (A2)</h3>
+                        <h3><i class="fas fa-shield-alt"></i> Administrer un SI sécurisé (A3 Cyber)</h3>
                         <div class="ac-grid">
-                            <div class="ac-item" title="Bonnes pratiques de cybersécurité">AC24.01</div>
-                            <div class="ac-item" title="Outils fondamentaux de sécurisation">AC24.02</div>
-                            <div class="ac-item" title="Sécurisation des services réseaux">AC24.03</div>
-                            <div class="ac-item" title="Outils cryptographiques adaptés">AC24.04</div>
-                            <div class="ac-item" title="Connaissance des types d’attaques">AC24.05</div>
-                            <div class="ac-item" title="Documentation technique en anglais">AC24.06</div>
-                        </div>
-                    </div>
-                    <div class="ac-column reveal">
-                        <h3><i class="fas fa-shield-alt"></i> Architecture & Analyse (A3)</h3>
-                        <div class="ac-grid">
-                            <div class="ac-item info" title="Analyse de risques & Politique de sécurité">AC34.01</div>
-                            <div class="ac-item info" title="Outils avancés de sécurisation">AC34.02</div>
-                            <div class="ac-item info" title="Sécurisation des OS">AC34.03</div>
-                            <div class="ac-item info" title="Proposition d'architecture SI sécurisée">AC34.04</div>
+                            <div class="ac-card blue">
+                                <span class="ac-code">AC34.01</span>
+                                <span class="ac-label">Participer activement à une analyse de risque pour définir une politique de sécurité</span>
+                            </div>
+                            <div class="ac-card blue">
+                                <span class="ac-code">AC34.02</span>
+                                <span class="ac-label">Mettre en œuvre des outils avancés de sécurisation d'une infrastructure réseau</span>
+                            </div>
+                            <div class="ac-card blue">
+                                <span class="ac-code">AC34.03</span>
+                                <span class="ac-label">Sécuriser les systèmes d'exploitation</span>
+                            </div>
+                            <div class="ac-card blue">
+                                <span class="ac-code">AC34.04</span>
+                                <span class="ac-label">Proposer une architecture sécurisée de système d'information pour une petite structure</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,14 +490,23 @@
                 <div class="sae-container reveal">
                     <h3 class="sae-title">Projets & Challenges Cybersécurité</h3>
 
-                    <div class="sae-card upcoming">
+                    <!-- ✅ Était .sae-card.upcoming → converti en sae-card classique -->
+                    <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>SAE 5.03 — Projet avancé en Cybersécurité (À venir)</span>
-                            <i class="fas fa-hourglass-start"></i>
+                            <span>SAE 5.03 — Sécurisation d'infrastructures avec Stormshield</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="sae-content">
-                            <p>Projet mobilisant l'analyse de risques, la sécurisation avancée d'infrastructures et la protection des OS.</p>
-                            <div class="tech-tags"><span>Analyse de risques</span><span>OS Hardening</span><span>Architecture SI</span></div>
+                            <p>Formation pratique sur Stormshield pour sécuriser un SI : filtrage avancé, pare-feu, VPN et protection des systèmes.</p>
+                            <ul class="custom-list">
+                                <li><strong>Firewall :</strong> Filtrage réseau, NAT, règles de sécurité et segmentation.</li>
+                                <li><strong>VPN :</strong> Mise en place de tunnels IPsec sécurisés.</li>
+                                <li><strong>Protection :</strong> Durcissement des accès et limitation des surfaces d'attaque.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Stormshield</span><span>Firewall</span><span>VPN IPsec</span>
+                                <span>Filtrage réseau</span><span>Sécurité SI</span>
+                            </div>
                         </div>
                     </div>
 
@@ -488,40 +546,69 @@
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 6 — SURVEILLER LE SI
+        ================================================================ -->
         <section id="surveiller-si" class="skill-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2 class="section-title"><i class="fas fa-eye"></i> Surveiller un système d’information sécurisé</h2>
+                    <h2 class="section-title"><i class="fas fa-eye"></i> Surveiller un système d'information sécurisé</h2>
                     <p class="section-intro">
-                        Mise en place de mesures de défense, surveillance active du SI et analyse des comportements suspects 
-                        pour évaluer la robustesse d'une infrastructure.
+                        Cette unité prépare à la <strong>supervision d'infrastructures critiques</strong> : détection d'anomalies,
+                        analyse des comportements suspects et mise en place de mesures de défense pour renforcer la robustesse
+                        et la sécurité du SI.
                     </p>
                 </div>
 
                 <div class="ac-container">
                     <div class="ac-column reveal">
-                        <h3><i class="fas fa-virus-slash"></i> Protection & Pentest (A2)</h3>
+                        <h3><i class="fas fa-eye"></i> Surveiller le SI (A3 Cyber)</h3>
                         <div class="ac-grid">
-                            <div class="ac-item" title="Administrer les protections anti-malware">AC25.01</div>
-                            <div class="ac-item" title="Outils de test de pénétration (Nmap, John...)">AC25.02</div>
-                        </div>
-                    </div>
-                    <div class="ac-column reveal">
-                        <h3><i class="fas fa-user-secret"></i> Surveillance & Réaction (A3)</h3>
-                        <div class="ac-grid">
-                            <div class="ac-item info" title="Surveiller l’activité du SI">AC35.01</div>
-                            <div class="ac-item info" title="Méthodologie de tests de pénétration">AC35.02</div>
-                            <div class="ac-item info" title="Réagir face à un incident de sécurité">AC35.03</div>
-                            <div class="ac-item info" title="Administrer les outils de surveillance">AC35.04</div>
+                            <div class="ac-card green">
+                                <span class="ac-code">AC35.01</span>
+                                <span class="ac-label">Surveiller l'activité du système d'information</span>
+                            </div>
+                            <div class="ac-card green">
+                                <span class="ac-code">AC35.02</span>
+                                <span class="ac-label">Appliquer une méthodologie de tests de pénétration</span>
+                            </div>
+                            <div class="ac-card green">
+                                <span class="ac-code">AC35.03</span>
+                                <span class="ac-label">Réagir face à un incident de sécurité</span>
+                            </div>
+                            <div class="ac-card green">
+                                <span class="ac-code">AC35.04</span>
+                                <span class="ac-label">Administrer les outils de surveillance du système d'information</span>
+                            </div>
                         </div>
                     </div>
                     <div class="skill-image-box reveal">
-                        <img src="fichier/UE5.jpg" alt="Illustration Surveillance SI">
+                        <img src="fichier/UE5.jpg" alt="Illustration Surveillance SI" loading="lazy">
                     </div>
                 </div>
 
                 <div class="sae-container reveal">
                     <h3 class="sae-title">Analyse & Prévention des Intrusions</h3>
+
+                    <!-- ✅ Était .sae-card.upcoming → converti en sae-card classique -->
+                    <div class="sae-card">
+                        <div class="sae-header" onclick="toggleSAE(this)">
+                            <span>SAE 5.03 — Supervision & Gestion d'incidents avec Stormshield</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="sae-content">
+                            <p>Supervision du SI avec Stormshield : analyse des journaux, détection des anomalies et réponse aux incidents.</p>
+                            <ul class="custom-list">
+                                <li><strong>Surveillance :</strong> Analyse des logs et du trafic pour détecter des intrusions.</li>
+                                <li><strong>Alerting :</strong> Déclenchement d'alertes et investigation des incidents.</li>
+                                <li><strong>Réaction :</strong> Gestion des incidents et adaptation des règles de sécurité.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Stormshield</span><span>Logs</span><span>Supervision</span>
+                                <span>IDS/IPS</span><span>Incident Response</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="sae-card">
                         <div class="sae-header" onclick="toggleSAE(this)">
@@ -538,108 +625,165 @@
                             <div class="tech-tags"><span>Wireshark</span><span>Nmap</span><span>Analyse comportementale</span></div>
                         </div>
                     </div>
-
-                    <div class="sae-card upcoming">
-                        <div class="sae-header" onclick="toggleSAE(this)">
-                            <span>SAE 5.03 — Stratégie de surveillance & Gestion d'incidents (À venir)</span>
-                            <i class="fas fa-hourglass-half"></i>
-                        </div>
-                        <div class="sae-content">
-                            <p>Mise en œuvre d’outils professionnels pour la surveillance globale du système d'information.</p>
-                            <ul class="custom-list">
-                                <li>Déploiement de SIEM et IDS/IPS (Suricata/Snort).</li>
-                                <li>Méthodologie complète de test d’intrusion (PTES).</li>
-                                <li>Gestion de crise et réponse sur incident.</li>
-                            </ul>
-                            <div class="tech-tags"><span>SIEM</span><span>IDS/IPS</span><span>Gestion d'incidents</span></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 7 — ALTERNANCE
+        ================================================================ -->
         <section id="alternance" class="skill-section alternance-page">
             <div class="container">
+
+                <!-- En-tête avec logo -->
                 <div class="section-header reveal">
                     <div class="company-logo">
-                        <img src="fichier/logo uha_alternance.png" alt="Logo UHA Alternance" style="height: 60px; margin-right: 20px;">
-                        <i class="fas fa-industry"></i>
-                        <h2 class="section-title">Constellium Neuf-Brisach</h2>
+                        <img src="fichier/Logo_entreprise_alterance.jpg" alt="Logo Constellium">
+                        <div class="company-logo-text">
+                            <h2 class="section-title">Constellium — Neuf-Brisach</h2>
+                            <span class="company-tagline">Leader mondial de la transformation de l'aluminium</span>
+                        </div>
                     </div>
                     <p class="section-intro">
-                        Leader mondial de la transformation de l’aluminium. Intégration au pôle <strong>Infrastructure & Réseau</strong> 
-                        pour garantir la continuité de production et la sécurité du SI.
+                        Intégration au pôle <strong>Infrastructure & Réseau</strong> au sein d'une équipe de
+                        7 techniciens, pour garantir la continuité de production et la sécurité du SI
+                        d'un site industriel critique opérant <strong>24h/24</strong>.
                     </p>
                 </div>
 
-                <div class="ac-container">
-                    <div class="glass-card ac-column reveal">
-                        <h3><i class="fas fa-user-tie"></i> Mon Poste</h3>
-                        <div class="card-body">
-                            <p>Alternant Infrastructure & Cybersécurité (Équipe de 7 techniciens).</p>
-                            <ul class="custom-list">
-                                <li><i class="fas fa-check-circle"></i> Maintien en condition opérationnelle (MCO).</li>
-                                <li><i class="fas fa-check-circle"></i> Supervision et amélioration du réseau.</li>
-                                <li><i class="fas fa-check-circle"></i> Protection du SI face aux menaces.</li>
-                            </ul>
+                <!-- Stats rapides -->
+                <div class="alternance-stats reveal">
+                    <div class="alt-stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong>2 ans</strong>
+                            <span>d'alternance</span>
                         </div>
                     </div>
+                    <div class="alt-stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>7 techniciens</strong>
+                            <span>dans l'équipe</span>
+                        </div>
+                    </div>
+                    <div class="alt-stat-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Groupe mondial</strong>
+                            <span>aluminium</span>
+                        </div>
+                    </div>
+                    <div class="alt-stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>24h/24</strong>
+                            <span>site critique</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="glass-card ac-column reveal">
-                        <h3><i class="fas fa-cogs"></i> Environnement Industriel</h3>
-                        <div class="card-body">
-                            <p>Site critique 24h/24 - Plusieurs milliers d'employés.</p>
-                            <div class="status-badge industrial">
-                                <span class="dot orange"></span> Haute Disponibilité
+                <!-- Missions en timeline -->
+                <div class="sae-container reveal">
+                    <h3 class="sae-title"><i class="fas fa-tasks"></i> Missions Techniques Réalisées</h3>
+
+                    <div class="mission-timeline">
+
+                        <div class="mission-entry reveal">
+                            <div class="mission-dot blue"></div>
+                            <div class="mission-card glass-card">
+                                <div class="card-header">
+                                    <span class="terminal-dots"></span>
+                                    <span class="card-title"><i class="fas fa-network-wired"></i> Infrastructure & Réseau</span>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="custom-list">
+                                        <li><i class="fas fa-angle-right"></i> Administration de switches Cisco (IOS) sur un parc multisite.</li>
+                                        <li><i class="fas fa-angle-right"></i> Déploiement d'APs WiFi en zones industrielles sensibles.</li>
+                                        <li><i class="fas fa-angle-right"></i> Gestion de flotte mobile Windows avec APN 4G dédié (SCCM).</li>
+                                        <li><i class="fas fa-angle-right"></i> Supervision réseau via The Dude & VMware.</li>
+                                    </ul>
+                                    <div class="tech-tags"><span>Cisco IOS</span><span>SCCM</span><span>The Dude</span><span>VMware</span></div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="mission-entry reveal">
+                            <div class="mission-dot red"></div>
+                            <div class="mission-card glass-card">
+                                <div class="card-header">
+                                    <span class="terminal-dots"></span>
+                                    <span class="card-title"><i class="fas fa-user-shield"></i> Cybersécurité Opérationnelle</span>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="custom-list">
+                                        <li><i class="fas fa-angle-right"></i> Migration et déploiement des agents XDR Cortex sur le parc.</li>
+                                        <li><i class="fas fa-angle-right"></i> Analyse de vulnérabilités avec Tenable (scan et remédiation).</li>
+                                        <li><i class="fas fa-angle-right"></i> Simulation de ransomware dans le cadre du Plan de Reprise d'Activité (DRP).</li>
+                                        <li><i class="fas fa-angle-right"></i> Effacement sécurisé de matériels avec Blancco.</li>
+                                    </ul>
+                                    <div class="tech-tags"><span>Cortex XDR</span><span>Tenable</span><span>Blancco</span><span>VPN/Access</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mission-entry reveal">
+                            <div class="mission-dot green"></div>
+                            <div class="mission-card glass-card">
+                                <div class="card-header">
+                                    <span class="terminal-dots"></span>
+                                    <span class="card-title"><i class="fas fa-tools"></i> Support & Développement</span>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="custom-list">
+                                        <li><i class="fas fa-angle-right"></i> Support utilisateurs niveaux 1 & 2 (incidents, demandes, escalades).</li>
+                                        <li><i class="fas fa-angle-right"></i> Développement d'un outil de monitoring TV : slideshow de dashboards de supervision automatisé.</li>
+                                    </ul>
+                                    <div class="tech-tags"><span>Support N1/N2</span><span>Monitoring</span><span>Dashboards</span></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="sae-container">
-                    <h3 class="sae-title">Missions Techniques Réalisées</h3>
-
-                    <div class="sae-card reveal">
-                        <div class="sae-header blue-border">
-                            <span><i class="fas fa-network-wired"></i> Infrastructure & Réseau</span>
-                        </div>
-                        <div class="sae-content-visible">
-                            <p>Administration de switches Cisco, déploiement AP WiFi en zones sensibles et gestion de flotte mobile Windows (4G/APN).</p>
-                            <div class="tech-tags"><span>Cisco IOS</span><span>SCCM</span><span>The Dude</span><span>VMware</span></div>
-                        </div>
-                    </div>
-
-                    <div class="sae-card reveal">
-                        <div class="sae-header red-border">
-                            <span><i class="fas fa-user-shield"></i> Cybersécurité Opérationnelle</span>
-                        </div>
-                        <div class="sae-content-visible">
-                            <p>Migration d'agents XDR Cortex, analyse Tenable et simulation de ransomware (DRP).</p>
-                            <div class="tech-tags"><span>Cortex XDR</span><span>Tenable</span><span>Blancco</span><span>VPN/Access</span></div>
-                        </div>
-                    </div>
-
-                    <div class="sae-card reveal">
-                        <div class="sae-header green-border">
-                            <span><i class="fas fa-tools"></i> Support & Développement</span>
-                        </div>
-                        <div class="sae-content-visible">
-                            <p>Support niveaux 1 & 2 et création d'un outil de monitoring TV (Slideshow dashboards).</p>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Bilan -->
                 <div class="glass-card conclusion-card reveal">
-                    <h3><i class="fas fa-award"></i> Bilan de l'expérience</h3>
-                    <div class="bilan-grid">
-                        <p><strong>Technique :</strong> Rigueur en environnement critique et gestion de parc à grande échelle.</p>
-                        <p><strong>Humain :</strong> Gestion des priorités et communication avec des profils variés.</p>
+                    <div class="card-header">
+                        <span class="terminal-dots"></span>
+                        <span class="card-title">bilan.sh</span>
                     </div>
-                    <p class="final-word-alternance">"Un pilier essentiel de mon projet professionnel."</p>
+                    <div class="card-body">
+                        <h3><i class="fas fa-award"></i> Bilan de l'expérience</h3>
+                        <div class="bilan-grid">
+                            <div class="bilan-item">
+                                <i class="fas fa-microchip bilan-icon"></i>
+                                <div>
+                                    <strong>Technique</strong>
+                                    <p>Rigueur en environnement critique, gestion de parc à grande échelle et confrontation aux enjeux réels de la cybersécurité industrielle.</p>
+                                </div>
+                            </div>
+                            <div class="bilan-item">
+                                <i class="fas fa-handshake bilan-icon"></i>
+                                <div>
+                                    <strong>Humain</strong>
+                                    <p>Gestion des priorités sous pression, communication avec des profils variés (techniciens, ingénieurs, utilisateurs métier).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-badge" style="margin-top: 20px;">
+                            <span class="dot orange"></span> Haute Disponibilité — Environnement de production actif
+                        </div>
+                        <p class="final-word-alternance">"Un pilier essentiel de mon projet professionnel."</p>
+                    </div>
                 </div>
+
             </div>
         </section>
 
+        <!-- ================================================================
+             SECTION 8 — TRACES / EXPLORATEUR
+        ================================================================ -->
         <section id="traces" class="skill-section traces-explorer-page">
             <div class="container">
                 <div class="section-header reveal">
@@ -648,24 +792,24 @@
                 </div>
 
                 <div class="explorer-container reveal">
-                    <aside class="explorer-sidebar">
+                    <aside class="explorer-sidebar" aria-label="Navigation des dossiers SAE">
                         <div class="sidebar-header">📂 Système de fichiers</div>
                         <ul class="folder-list">
                             <li class="folder-group-title">Semestre 5</li>
                             <li class="folder-item" data-folder="sae501"><i class="fas fa-folder"></i> SAE 5.01</li>
                             <li class="folder-item" data-folder="sae502"><i class="fas fa-folder"></i> SAE 5.02</li>
-                            
+                            <li class="folder-item" data-folder="sae503"><i class="fas fa-folder"></i> SAE 5.03</li>
+                            <li class="folder-group-title">Semestre 4</li>
+                            <li class="folder-item" data-folder="sae401"><i class="fas fa-folder"></i> SAE 4.01</li>
                             <li class="folder-group-title">Semestre 3</li>
                             <li class="folder-item" data-folder="sae301"><i class="fas fa-folder"></i> SAE 3.01</li>
                             <li class="folder-item" data-folder="sae302"><i class="fas fa-folder"></i> SAE 3.02</li>
                             <li class="folder-item" data-folder="sae303"><i class="fas fa-folder"></i> SAE 3.03</li>
                             <li class="folder-item" data-folder="sae304"><i class="fas fa-folder"></i> SAE 3.04</li>
-
                             <li class="folder-group-title">Semestre 2</li>
                             <li class="folder-item" data-folder="sae202"><i class="fas fa-folder"></i> SAE 2.02</li>
                             <li class="folder-item" data-folder="sae203"><i class="fas fa-folder"></i> SAE 2.03</li>
                             <li class="folder-item" data-folder="sae204"><i class="fas fa-folder"></i> SAE 2.04</li>
-
                             <li class="folder-group-title">Semestre 1</li>
                             <li class="folder-item" data-folder="sae101"><i class="fas fa-folder"></i> SAE 1.01</li>
                             <li class="folder-item" data-folder="sae102"><i class="fas fa-folder"></i> SAE 1.02</li>
@@ -675,7 +819,7 @@
                         </ul>
                     </aside>
 
-                    <div class="explorer-view">
+                    <div class="explorer-view" role="region" aria-label="Contenu du dossier sélectionné">
                         <div id="explorer-placeholder" class="explorer-empty">
                             <i class="fas fa-arrow-left"></i>
                             <p>Sélectionnez un dossier pour voir les traces</p>
@@ -685,15 +829,12 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Alexis STOCK - Étudiant BUT Réseaux & Télécommunications</p>
-            <div class="footer-links">
-                <p>Alternance chez <strong>Constellium</strong></p>
-            </div>
-        </div>
+        <p>&copy; 2026 Alexis STOCK — Étudiant BUT Réseaux & Télécommunications</p>
+        <p>Alternance chez <strong>Constellium</strong></p>
     </footer>
 
     <script src="script.js"></script>
